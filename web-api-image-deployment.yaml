@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-api-image-deployment
+  labels:
+    app: web-api-image
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-api-image
+  template:
+    metadata:
+      labels:
+        app: web-api-image
+    spec:
+      containers:
+      - name: web-api-image
+        image: ksahoodocker/web-api-image:latest
+        ports:
+        - containerPort: 5003
+
+
+
