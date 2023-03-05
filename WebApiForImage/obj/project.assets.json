@@ -95,6 +95,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "DataLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DataLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataLayer.dll": {}
+        }
       }
     }
   },
@@ -303,10 +313,16 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "DataLayer/1.0.0": {
+      "type": "project",
+      "path": "../DataLayer/DataLayer.csproj",
+      "msbuildProject": "../DataLayer/DataLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "DataLayer >= 1.0.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.17.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -318,11 +334,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ContainerImages\\WebApiForImage\\WebApiForImage\\WebApiForImage.csproj",
+      "projectUniqueName": "D:\\UbuntuVM\\ContainerImages\\web-api-image\\WebApiForImage\\WebApiForImage.csproj",
       "projectName": "WebApiForImage",
-      "projectPath": "D:\\ContainerImages\\WebApiForImage\\WebApiForImage\\WebApiForImage.csproj",
+      "projectPath": "D:\\UbuntuVM\\ContainerImages\\web-api-image\\WebApiForImage\\WebApiForImage.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\ContainerImages\\WebApiForImage\\WebApiForImage\\obj\\",
+      "outputPath": "D:\\UbuntuVM\\ContainerImages\\web-api-image\\WebApiForImage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -343,7 +359,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\UbuntuVM\\ContainerImages\\web-api-image\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "D:\\UbuntuVM\\ContainerImages\\web-api-image\\DataLayer\\DataLayer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

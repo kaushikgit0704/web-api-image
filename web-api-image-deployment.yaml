@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-api-image-deployment
+  name: web-api-image-kube-deployment
   labels:
     app: web-api-image
 spec:
@@ -18,7 +18,7 @@ spec:
       - name: web-api-image
         image: ksahoodocker/web-api-image:latest
         ports:
-        - containerPort: 5003
+        - containerPort: 5004
 
 
 

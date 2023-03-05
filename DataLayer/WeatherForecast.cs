@@ -1,4 +1,4 @@
-namespace WebApiForImage
+namespace DataLayer
 {
     public class WeatherForecast
     {
